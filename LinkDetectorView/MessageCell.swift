@@ -26,6 +26,12 @@ class MessageCell: UITableViewCell {
         return size.height
     }
     
+    class func heightByBoundingRect(for message: String, width: CGFloat) -> CGFloat {
+        let string = NSAttributedString(string: message, attributes:[NSFontAttributeName: UIFont(name: "Helvetica", size: 14.0)!])
+        let size = string.boundingRectWithSize(CGSize(width: width, height: CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil)
+        return size.height + 1 /* magic number */
+    }
+    
     @IBOutlet weak var messageTextView: UITextView! {
         didSet {
             messageTextView.textContainer.lineFragmentPadding = 0.0

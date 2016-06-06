@@ -24,7 +24,7 @@ class ViewController: UIViewController {
             
                 //            for i in 0...random.nextInt()
             for i in 0...line {
-                message += "\(i % 10)"
+                message += "a"
             }
             messages.append(message)
         }
@@ -57,7 +57,7 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        let height = MessageCell.height(for: messages[indexPath.row], width: view.frame.width)
+        let height = MessageCell.heightByBoundingRect(for: messages[indexPath.row], width: view.frame.width)
         print(height)
         return height
     }
