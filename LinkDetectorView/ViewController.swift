@@ -15,17 +15,19 @@ class ViewController: UIViewController {
     
     lazy var messages: [String] = {
         
-        var messages = [String]()
+        let letters = "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんっゃゅょabcdefghijklmnopqrstuvwxyz0123456789-「」"
+        let messageLength = GKRandomDistribution(lowestValue: 1, highestValue: 500)
+        let letterIndex = GKRandomDistribution(lowestValue: 1, highestValue: letters.characters.count - 1)
 
-        let random = GKRandomDistribution(lowestValue: 1, highestValue: 500)
-        
+        var messages = [String]()
         for line in 0...999 {
             var message = "http://google.com y.kato@ohako-inc.jp "
             
-                //            for i in 0...random.nextInt()
-            for i in 0...line {
-                message += "a"
+            for i in 0...messageLength.nextInt() {
+                let index = letterIndex.nextInt()
+                message += letters[index]
             }
+            message += "🍎"
             messages.append(message)
         }
         

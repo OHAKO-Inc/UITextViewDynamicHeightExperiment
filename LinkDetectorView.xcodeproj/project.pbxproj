@@ -14,6 +14,7 @@
 		E32100361D05308F00518651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E32100341D05308F00518651 /* LaunchScreen.storyboard */; };
 		E32100411D05308F00518651 /* LinkDetectorViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32100401D05308F00518651 /* LinkDetectorViewTests.swift */; };
 		E321004C1D05308F00518651 /* LinkDetectorViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E321004B1D05308F00518651 /* LinkDetectorViewUITests.swift */; };
+		E38696751D05727E00069CFF /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38696741D05727E00069CFF /* StringExtension.swift */; };
 		E3EF69D71D0546EB00AB959D /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EF69D61D0546EB00AB959D /* MessageCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		E32100471D05308F00518651 /* LinkDetectorViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkDetectorViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E321004B1D05308F00518651 /* LinkDetectorViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDetectorViewUITests.swift; sourceTree = "<group>"; };
 		E321004D1D05308F00518651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E38696741D05727E00069CFF /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E3EF69D61D0546EB00AB959D /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				E32100321D05308F00518651 /* Assets.xcassets */,
 				E32100341D05308F00518651 /* LaunchScreen.storyboard */,
 				E32100371D05308F00518651 /* Info.plist */,
+				E38696741D05727E00069CFF /* StringExtension.swift */,
 			);
 			path = LinkDetectorView;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E38696751D05727E00069CFF /* StringExtension.swift in Sources */,
 				E321002E1D05308F00518651 /* ViewController.swift in Sources */,
 				E321002C1D05308F00518651 /* AppDelegate.swift in Sources */,
 				E3EF69D71D0546EB00AB959D /* MessageCell.swift in Sources */,

@@ -10,6 +10,8 @@ import UIKit
 
 class MessageCell: UITableViewCell {
 
+    static let messageFont = UIFont(name: "HiraKakuProN-W6", size: 14.0)!
+    
     static var dummyTextView = UITextView() {
         didSet {
             dummyTextView.textContainer.lineFragmentPadding = 0.0
@@ -27,9 +29,9 @@ class MessageCell: UITableViewCell {
     }
     
     class func heightByBoundingRect(for message: String, width: CGFloat) -> CGFloat {
-        let string = NSAttributedString(string: message, attributes:[NSFontAttributeName: UIFont(name: "Helvetica", size: 14.0)!])
+        let string = makeAttributedText(message)
         let size = string.boundingRectWithSize(CGSize(width: width, height: CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil)
-        return size.height + 1 /* magic number */
+        return size.height + 10 /* magic number */
     }
     
     @IBOutlet weak var messageTextView: UITextView! {
@@ -40,8 +42,11 @@ class MessageCell: UITableViewCell {
     }
     
     func configure(with message: String) {
-        messageTextView.text = message
-        //        updateFrame(messageTextView)
+//        messageTextView.text = message
+
+        messageTextView.attributedText = MessageCell.makeAttributedText(message)
+        
+//        updateFrame(messageTextView)
     }
     
     private func updateFrame(textView: UITextView) {
@@ -51,5 +56,14 @@ class MessageCell: UITableViewCell {
         var newFrame = textView.frame
         newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
         textView.frame = newFrame;
+    }
+    
+    private class func makeAttributedText(message: String) -> NSAttributedString {
+        let attrText = NSMutableAttributedString(string: message)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 10.0
+        attrText.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSRange(location: 0, length: attrText.length))
+        attrText.addAttributes([NSFontAttributeName: MessageCell.messageFont], range: NSRange(location: 0, length: attrText.length))
+        return attrText
     }
 }
