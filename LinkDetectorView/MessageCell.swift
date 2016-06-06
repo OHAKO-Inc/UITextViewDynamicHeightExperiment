@@ -30,8 +30,8 @@ class MessageCell: UITableViewCell {
     
     class func heightByBoundingRect(for message: String, width: CGFloat) -> CGFloat {
         let string = makeAttributedText(message)
-        let size = string.boundingRectWithSize(CGSize(width: width, height: CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil)
-        return size.height + 10 /* magic number */
+        let size = string.boundingRectWithSize(CGSize(width: 280.0, height: CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil)
+        return size.height + 10.0 /* magic number */ + 40.0 /* margin around textView*/
     }
     
     @IBOutlet weak var messageTextView: UITextView! {
