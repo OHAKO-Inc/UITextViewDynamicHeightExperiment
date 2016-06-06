@@ -21,12 +21,11 @@ class ViewController: UIViewController {
         
         for line in 0...999 {
             var message = ""
-
+            
                 //            for i in 0...random.nextInt()
             for i in 0...line {
-                message += "a"
+                message += "\(i % 10)"
             }
-            message += "\(message.characters.count)"
             messages.append(message)
         }
         
