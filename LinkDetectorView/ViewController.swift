@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         let random = GKRandomDistribution(lowestValue: 1, highestValue: 500)
         
         for line in 0...999 {
-            var message = ""
+            var message = "http://google.com y.kato@ohako-inc.jp "
             
                 //            for i in 0...random.nextInt()
             for i in 0...line {
