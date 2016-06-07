@@ -21,13 +21,19 @@ class ViewController: UIViewController {
 
         var messages = [String]()
         for line in 0...999 {
-            var message = "http://google.com y.kato@ohako-inc.jp "
+            var message = ""
             
             for i in 0...messageLength.nextInt() {
                 let index = letterIndex.nextInt()
                 message += letters[index]
+                if i % 100 == 0 {
+                    message += " http://google.com "
+                }
+                if i % 200 == 0 {
+                    message += " y.kato@ohako-inc.jp "
+                }
             }
-            message += "🍎"
+            message += "gjqyp🍎"
             messages.append(message)
         }
         
