@@ -13,6 +13,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private var startDate: NSDate = NSDate()
+    
     lazy var messages: [String] = {
         
         let letters = "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんっゃゅょabcdefghijklmnopqrstuvwxyz0123456789-「」"
@@ -40,11 +42,6 @@ class ViewController: UIViewController {
         return messages
         
     }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //        tableView.rowHeight = UITableViewAutomaticDimension
-    }
 
 }
 
@@ -65,11 +62,19 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+
+        if indexPath.row == 0 {
+            startDate = NSDate()
+        }
+        
+        // boundingRect
         let height = MessageCell.heightByBoundingRect(for: messages[indexPath.row], width: view.frame.width)
-        print(height)
+        // sizeThatFits
+        //        let height = MessageCell.heightBySizeThatFits(for: messages[indexPath.row], width: view.frame.width)
+        
+        if indexPath.row == messages.count - 1 {
+            print(NSDate().timeIntervalSinceDate(startDate))
+        }
         return height
     }
-    //    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    //        return UITableViewAutomaticDimension
-    //    }
 }

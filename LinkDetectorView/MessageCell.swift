@@ -10,6 +10,8 @@ import UIKit
 
 class MessageCell: UITableViewCell {
 
+    // MARK: static properties
+    
     static let messageFont = UIFont(name: "HiraKakuProN-W6", size: 14.0)!
     
     static var dummyTextView = UITextView() {
@@ -21,19 +23,26 @@ class MessageCell: UITableViewCell {
         }
     }
     
-    class func height(for message: String, width: CGFloat) -> CGFloat {
-        dummyTextView.font = UIFont(name: "Helvetica", size: 14.0)
+    // MARK: static methods
+    class func heightBySizeThatFits(for message: String, width: CGFloat) -> CGFloat {
+        dummyTextView.font = messageFont
         dummyTextView.text = message
-        let size = dummyTextView.sizeThatFits(CGSize(width: width, height: CGFloat.max))
-        return size.height
+        let size = dummyTextView.sizeThatFits(CGSize(width: 280.0, height: CGFloat.max))
+        return size.height + 40.0
     }
     
     class func heightByBoundingRect(for message: String, width: CGFloat) -> CGFloat {
         let string = makeAttributedText(message)
-        let size = string.boundingRectWithSize(CGSize(width: 280.0, height: CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil)
+        let options = unsafeBitCast(
+            NSStringDrawingOptions.UsesLineFragmentOrigin.rawValue |
+                NSStringDrawingOptions.UsesFontLeading.rawValue,
+            NSStringDrawingOptions.self)
+        let size = string.boundingRectWithSize(CGSize(width: 280.0, height: CGFloat.max), options: options, context: nil)
         return size.height + 10.0 /* magic number */ + 40.0 /* margin around textView*/
     }
     
+    
+    // MARK: properties
     @IBOutlet weak var messageTextView: UITextView! {
         didSet {
             messageTextView.textContainer.lineFragmentPadding = 0.0
@@ -41,21 +50,11 @@ class MessageCell: UITableViewCell {
         }
     }
     
-    func configure(with message: String) {
-//        messageTextView.text = message
-
-        messageTextView.attributedText = MessageCell.makeAttributedText(message)
-        
-//        updateFrame(messageTextView)
-    }
     
-    private func updateFrame(textView: UITextView) {
-        let fixedWidth = textView.frame.size.width
-        textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.max))
-        let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.max))
-        var newFrame = textView.frame
-        newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
-        textView.frame = newFrame;
+    // MARK: methods
+    
+    func configure(with message: String) {
+        messageTextView.attributedText = MessageCell.makeAttributedText(message)
     }
     
     private class func makeAttributedText(message: String) -> NSAttributedString {
