@@ -36,17 +36,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E32100281D05308E00518651 /* LinkDetectorView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkDetectorView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E32100281D05308E00518651 /* UITextViewDynamicHeightExperiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITextViewDynamicHeightExperiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E321002B1D05308F00518651 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E321002D1D05308F00518651 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E32100301D05308F00518651 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E32100321D05308F00518651 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E32100351D05308F00518651 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E32100371D05308F00518651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E321003C1D05308F00518651 /* LinkDetectorViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkDetectorViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E321003C1D05308F00518651 /* UITextViewDynamicHeightExperiment.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITextViewDynamicHeightExperiment.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32100401D05308F00518651 /* LinkDetectorViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDetectorViewTests.swift; sourceTree = "<group>"; };
 		E32100421D05308F00518651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E32100471D05308F00518651 /* LinkDetectorViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkDetectorViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E32100471D05308F00518651 /* UITextViewDynamicHeightExperiment.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITextViewDynamicHeightExperiment.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E321004B1D05308F00518651 /* LinkDetectorViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDetectorViewUITests.swift; sourceTree = "<group>"; };
 		E321004D1D05308F00518651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E38696741D05727E00069CFF /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
@@ -81,9 +81,9 @@
 		E321001F1D05308E00518651 = {
 			isa = PBXGroup;
 			children = (
-				E321002A1D05308F00518651 /* LinkDetectorView */,
-				E321003F1D05308F00518651 /* LinkDetectorViewTests */,
-				E321004A1D05308F00518651 /* LinkDetectorViewUITests */,
+				E321002A1D05308F00518651 /* UITextViewDynamicHeightExperiment */,
+				E321003F1D05308F00518651 /* UITextViewDynamicHeightExperimentTests */,
+				E321004A1D05308F00518651 /* UITextViewDynamicHeightExperimentUITests */,
 				E32100291D05308F00518651 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,14 +91,14 @@
 		E32100291D05308F00518651 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E32100281D05308E00518651 /* LinkDetectorView.app */,
-				E321003C1D05308F00518651 /* LinkDetectorViewTests.xctest */,
-				E32100471D05308F00518651 /* LinkDetectorViewUITests.xctest */,
+				E32100281D05308E00518651 /* UITextViewDynamicHeightExperiment.app */,
+				E321003C1D05308F00518651 /* UITextViewDynamicHeightExperiment.xctest */,
+				E32100471D05308F00518651 /* UITextViewDynamicHeightExperiment.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E321002A1D05308F00518651 /* LinkDetectorView */ = {
+		E321002A1D05308F00518651 /* UITextViewDynamicHeightExperiment */ = {
 			isa = PBXGroup;
 			children = (
 				E321002B1D05308F00518651 /* AppDelegate.swift */,
@@ -110,33 +110,36 @@
 				E32100371D05308F00518651 /* Info.plist */,
 				E38696741D05727E00069CFF /* StringExtension.swift */,
 			);
+			name = UITextViewDynamicHeightExperiment;
 			path = LinkDetectorView;
 			sourceTree = "<group>";
 		};
-		E321003F1D05308F00518651 /* LinkDetectorViewTests */ = {
+		E321003F1D05308F00518651 /* UITextViewDynamicHeightExperimentTests */ = {
 			isa = PBXGroup;
 			children = (
 				E32100401D05308F00518651 /* LinkDetectorViewTests.swift */,
 				E32100421D05308F00518651 /* Info.plist */,
 			);
+			name = UITextViewDynamicHeightExperimentTests;
 			path = LinkDetectorViewTests;
 			sourceTree = "<group>";
 		};
-		E321004A1D05308F00518651 /* LinkDetectorViewUITests */ = {
+		E321004A1D05308F00518651 /* UITextViewDynamicHeightExperimentUITests */ = {
 			isa = PBXGroup;
 			children = (
 				E321004B1D05308F00518651 /* LinkDetectorViewUITests.swift */,
 				E321004D1D05308F00518651 /* Info.plist */,
 			);
+			name = UITextViewDynamicHeightExperimentUITests;
 			path = LinkDetectorViewUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E32100271D05308E00518651 /* LinkDetectorView */ = {
+		E32100271D05308E00518651 /* UITextViewDynamicHeightExperiment */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E32100501D05308F00518651 /* Build configuration list for PBXNativeTarget "LinkDetectorView" */;
+			buildConfigurationList = E32100501D05308F00518651 /* Build configuration list for PBXNativeTarget "UITextViewDynamicHeightExperiment" */;
 			buildPhases = (
 				E32100241D05308E00518651 /* Sources */,
 				E32100251D05308E00518651 /* Frameworks */,
@@ -146,14 +149,14 @@
 			);
 			dependencies = (
 			);
-			name = LinkDetectorView;
+			name = UITextViewDynamicHeightExperiment;
 			productName = LinkDetectorView;
-			productReference = E32100281D05308E00518651 /* LinkDetectorView.app */;
+			productReference = E32100281D05308E00518651 /* UITextViewDynamicHeightExperiment.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E321003B1D05308F00518651 /* LinkDetectorViewTests */ = {
+		E321003B1D05308F00518651 /* UITextViewDynamicHeightExperimentTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E32100531D05308F00518651 /* Build configuration list for PBXNativeTarget "LinkDetectorViewTests" */;
+			buildConfigurationList = E32100531D05308F00518651 /* Build configuration list for PBXNativeTarget "UITextViewDynamicHeightExperimentTests" */;
 			buildPhases = (
 				E32100381D05308F00518651 /* Sources */,
 				E32100391D05308F00518651 /* Frameworks */,
@@ -164,14 +167,14 @@
 			dependencies = (
 				E321003E1D05308F00518651 /* PBXTargetDependency */,
 			);
-			name = LinkDetectorViewTests;
+			name = UITextViewDynamicHeightExperimentTests;
 			productName = LinkDetectorViewTests;
-			productReference = E321003C1D05308F00518651 /* LinkDetectorViewTests.xctest */;
+			productReference = E321003C1D05308F00518651 /* UITextViewDynamicHeightExperiment.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E32100461D05308F00518651 /* LinkDetectorViewUITests */ = {
+		E32100461D05308F00518651 /* UITextViewDynamicHeightExperimentUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E32100561D05308F00518651 /* Build configuration list for PBXNativeTarget "LinkDetectorViewUITests" */;
+			buildConfigurationList = E32100561D05308F00518651 /* Build configuration list for PBXNativeTarget "UITextViewDynamicHeightExperimentUITests" */;
 			buildPhases = (
 				E32100431D05308F00518651 /* Sources */,
 				E32100441D05308F00518651 /* Frameworks */,
@@ -182,9 +185,9 @@
 			dependencies = (
 				E32100491D05308F00518651 /* PBXTargetDependency */,
 			);
-			name = LinkDetectorViewUITests;
+			name = UITextViewDynamicHeightExperimentUITests;
 			productName = LinkDetectorViewUITests;
-			productReference = E32100471D05308F00518651 /* LinkDetectorViewUITests.xctest */;
+			productReference = E32100471D05308F00518651 /* UITextViewDynamicHeightExperiment.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -210,7 +213,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E32100231D05308E00518651 /* Build configuration list for PBXProject "LinkDetectorView" */;
+			buildConfigurationList = E32100231D05308E00518651 /* Build configuration list for PBXProject "UITextViewDynamicHeightExperiment" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -223,9 +226,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E32100271D05308E00518651 /* LinkDetectorView */,
-				E321003B1D05308F00518651 /* LinkDetectorViewTests */,
-				E32100461D05308F00518651 /* LinkDetectorViewUITests */,
+				E32100271D05308E00518651 /* UITextViewDynamicHeightExperiment */,
+				E321003B1D05308F00518651 /* UITextViewDynamicHeightExperimentTests */,
+				E32100461D05308F00518651 /* UITextViewDynamicHeightExperimentUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,12 +293,12 @@
 /* Begin PBXTargetDependency section */
 		E321003E1D05308F00518651 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E32100271D05308E00518651 /* LinkDetectorView */;
+			target = E32100271D05308E00518651 /* UITextViewDynamicHeightExperiment */;
 			targetProxy = E321003D1D05308F00518651 /* PBXContainerItemProxy */;
 		};
 		E32100491D05308F00518651 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E32100271D05308E00518651 /* LinkDetectorView */;
+			target = E32100271D05308E00518651 /* UITextViewDynamicHeightExperiment */;
 			targetProxy = E32100481D05308F00518651 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -411,8 +414,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LinkDetectorView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.ohako-inc.LinkDetectorView";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ohako-inc.UITextViewDynamicHeightExperiment";
+				PRODUCT_NAME = UITextViewDynamicHeightExperiment;
 			};
 			name = Debug;
 		};
@@ -422,8 +425,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LinkDetectorView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.ohako-inc.LinkDetectorView";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ohako-inc.UITextViewDynamicHeightExperiment";
+				PRODUCT_NAME = UITextViewDynamicHeightExperiment;
 			};
 			name = Release;
 		};
@@ -434,8 +437,8 @@
 				INFOPLIST_FILE = LinkDetectorViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ohako-inc.LinkDetectorViewTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LinkDetectorView.app/LinkDetectorView";
+				PRODUCT_NAME = UITextViewDynamicHeightExperiment;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITextViewDynamicHeightExperiment.app/UITextViewDynamicHeightExperiment";
 			};
 			name = Debug;
 		};
@@ -446,8 +449,8 @@
 				INFOPLIST_FILE = LinkDetectorViewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ohako-inc.LinkDetectorViewTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LinkDetectorView.app/LinkDetectorView";
+				PRODUCT_NAME = UITextViewDynamicHeightExperiment;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITextViewDynamicHeightExperiment.app/UITextViewDynamicHeightExperiment";
 			};
 			name = Release;
 		};
@@ -457,7 +460,7 @@
 				INFOPLIST_FILE = LinkDetectorViewUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ohako-inc.LinkDetectorViewUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = UITextViewDynamicHeightExperiment;
 				TEST_TARGET_NAME = LinkDetectorView;
 			};
 			name = Debug;
@@ -468,7 +471,7 @@
 				INFOPLIST_FILE = LinkDetectorViewUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ohako-inc.LinkDetectorViewUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = UITextViewDynamicHeightExperiment;
 				TEST_TARGET_NAME = LinkDetectorView;
 			};
 			name = Release;
@@ -476,7 +479,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E32100231D05308E00518651 /* Build configuration list for PBXProject "LinkDetectorView" */ = {
+		E32100231D05308E00518651 /* Build configuration list for PBXProject "UITextViewDynamicHeightExperiment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E321004E1D05308F00518651 /* Debug */,
@@ -485,7 +488,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E32100501D05308F00518651 /* Build configuration list for PBXNativeTarget "LinkDetectorView" */ = {
+		E32100501D05308F00518651 /* Build configuration list for PBXNativeTarget "UITextViewDynamicHeightExperiment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E32100511D05308F00518651 /* Debug */,
@@ -494,7 +497,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E32100531D05308F00518651 /* Build configuration list for PBXNativeTarget "LinkDetectorViewTests" */ = {
+		E32100531D05308F00518651 /* Build configuration list for PBXNativeTarget "UITextViewDynamicHeightExperimentTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E32100541D05308F00518651 /* Debug */,
@@ -503,7 +506,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E32100561D05308F00518651 /* Build configuration list for PBXNativeTarget "LinkDetectorViewUITests" */ = {
+		E32100561D05308F00518651 /* Build configuration list for PBXNativeTarget "UITextViewDynamicHeightExperimentUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E32100571D05308F00518651 /* Debug */,

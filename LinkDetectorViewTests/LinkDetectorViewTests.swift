@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import LinkDetectorView
+@testable import UITextViewDynamicHeightExperiment
 
 class LinkDetectorViewTests: XCTestCase {
     
