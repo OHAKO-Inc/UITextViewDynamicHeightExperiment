@@ -202,13 +202,16 @@
 				TargetAttributes = {
 					E32100271D05308E00518651 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 					};
 					E321003B1D05308F00518651 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = E32100271D05308E00518651;
 					};
 					E32100461D05308F00518651 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = E32100271D05308E00518651;
 					};
 				};
@@ -416,6 +419,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ohako-inc.UITextViewDynamicHeightExperiment";
 				PRODUCT_NAME = UITextViewDynamicHeightExperiment;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -427,6 +431,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ohako-inc.UITextViewDynamicHeightExperiment";
 				PRODUCT_NAME = UITextViewDynamicHeightExperiment;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -438,6 +443,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ohako-inc.LinkDetectorViewTests";
 				PRODUCT_NAME = UITextViewDynamicHeightExperiment;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITextViewDynamicHeightExperiment.app/UITextViewDynamicHeightExperiment";
 			};
 			name = Debug;
@@ -450,6 +456,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ohako-inc.LinkDetectorViewTests";
 				PRODUCT_NAME = UITextViewDynamicHeightExperiment;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UITextViewDynamicHeightExperiment.app/UITextViewDynamicHeightExperiment";
 			};
 			name = Release;
@@ -461,6 +468,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ohako-inc.LinkDetectorViewUITests";
 				PRODUCT_NAME = UITextViewDynamicHeightExperiment;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = LinkDetectorView;
 			};
 			name = Debug;
@@ -472,6 +480,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ohako-inc.LinkDetectorViewUITests";
 				PRODUCT_NAME = UITextViewDynamicHeightExperiment;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = LinkDetectorView;
 			};
 			name = Release;

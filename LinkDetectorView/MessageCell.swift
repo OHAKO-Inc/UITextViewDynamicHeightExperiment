@@ -17,7 +17,7 @@ class MessageCell: UITableViewCell {
     static var dummyTextView = UITextView() {
         didSet {
             dummyTextView.textContainer.lineFragmentPadding = 0.0
-            dummyTextView.textContainerInset = UIEdgeInsetsZero
+            dummyTextView.textContainerInset = UIEdgeInsets.zero
             dummyTextView.showsVerticalScrollIndicator = false
             dummyTextView.showsHorizontalScrollIndicator = false
         }
@@ -27,17 +27,17 @@ class MessageCell: UITableViewCell {
     class func heightBySizeThatFits(for message: String, width: CGFloat) -> CGFloat {
         dummyTextView.font = messageFont
         dummyTextView.text = message
-        let size = dummyTextView.sizeThatFits(CGSize(width: 280.0, height: CGFloat.max))
+        let size = dummyTextView.sizeThatFits(CGSize(width: 280.0, height: CGFloat.greatestFiniteMagnitude))
         return size.height + 40.0
     }
     
     class func heightByBoundingRect(for message: String, width: CGFloat) -> CGFloat {
         let string = makeAttributedText(message)
         let options = unsafeBitCast(
-            NSStringDrawingOptions.UsesLineFragmentOrigin.rawValue |
-                NSStringDrawingOptions.UsesFontLeading.rawValue,
-            NSStringDrawingOptions.self)
-        let size = string.boundingRectWithSize(CGSize(width: 280.0, height: CGFloat.max), options: options, context: nil)
+            NSStringDrawingOptions.usesLineFragmentOrigin.rawValue |
+                NSStringDrawingOptions.usesFontLeading.rawValue,
+            to: NSStringDrawingOptions.self)
+        let size = string.boundingRect(with: CGSize(width: 280.0, height: CGFloat.greatestFiniteMagnitude), options: options, context: nil)
         return size.height + 10.0 /* magic number */ + 40.0 /* margin around textView*/
     }
     
@@ -46,7 +46,7 @@ class MessageCell: UITableViewCell {
     @IBOutlet weak var messageTextView: UITextView! {
         didSet {
             messageTextView.textContainer.lineFragmentPadding = 0.0
-            messageTextView.textContainerInset = UIEdgeInsetsZero
+            messageTextView.textContainerInset = UIEdgeInsets.zero
         }
     }
     
@@ -57,7 +57,7 @@ class MessageCell: UITableViewCell {
         messageTextView.attributedText = MessageCell.makeAttributedText(message)
     }
     
-    private class func makeAttributedText(message: String) -> NSAttributedString {
+    fileprivate class func makeAttributedText(_ message: String) -> NSAttributedString {
         let attrText = NSMutableAttributedString(string: message)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 10.0

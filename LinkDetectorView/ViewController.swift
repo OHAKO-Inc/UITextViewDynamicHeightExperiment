@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var startDate: NSDate = NSDate()
+    fileprivate var startDate: Date = Date()
     
     lazy var messages: [String] = {
         
@@ -47,12 +47,12 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(String(MessageCell), forIndexPath: indexPath) as! MessageCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MessageCell.self), for: indexPath) as! MessageCell
         cell.configure(with: messages[indexPath.row])
         return cell
     }
@@ -61,10 +61,10 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
         if indexPath.row == 0 {
-            startDate = NSDate()
+            startDate = Date()
         }
         
         // boundingRect
@@ -73,7 +73,7 @@ extension ViewController: UITableViewDelegate {
         //        let height = MessageCell.heightBySizeThatFits(for: messages[indexPath.row], width: view.frame.width)
         
         if indexPath.row == messages.count - 1 {
-            print(NSDate().timeIntervalSinceDate(startDate))
+            print(Date().timeIntervalSince(startDate))
         }
         return height
     }
