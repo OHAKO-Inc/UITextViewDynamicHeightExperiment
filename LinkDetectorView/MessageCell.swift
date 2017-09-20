@@ -61,8 +61,8 @@ class MessageCell: UITableViewCell {
         let attrText = NSMutableAttributedString(string: message)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 10.0
-        attrText.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSRange(location: 0, length: attrText.length))
-        attrText.addAttributes([NSFontAttributeName: MessageCell.messageFont], range: NSRange(location: 0, length: attrText.length))
+        attrText.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: NSRange(location: 0, length: attrText.length))
+        attrText.addAttributes([NSAttributedStringKey.font: MessageCell.messageFont], range: NSRange(location: 0, length: attrText.length))
         return attrText
     }
 }
